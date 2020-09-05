@@ -1,4 +1,6 @@
-﻿namespace Nero.Windows.Controls
+﻿using System;
+
+namespace Nero.Windows.Controls
 {
     partial class SQLServerDatabaseControl
     {
@@ -32,7 +34,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.buttonRefreshServer = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxSQLServers = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -48,7 +50,7 @@
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.buttonRefreshServer);
             this.groupBox3.Controls.Add(this.comboBox2);
-            this.groupBox3.Controls.Add(this.comboBox1);
+            this.groupBox3.Controls.Add(this.comboBoxSQLServers);
             this.groupBox3.Controls.Add(this.checkBox1);
             this.groupBox3.Controls.Add(this.textBox9);
             this.groupBox3.Controls.Add(this.label9);
@@ -91,13 +93,13 @@
             this.comboBox2.Size = new System.Drawing.Size(200, 21);
             this.comboBox2.TabIndex = 12;
             // 
-            // comboBox1
+            // comboBoxSQLServers
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(103, 18);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 21);
-            this.comboBox1.TabIndex = 11;
+            this.comboBoxSQLServers.FormattingEnabled = true;
+            this.comboBoxSQLServers.Location = new System.Drawing.Point(103, 18);
+            this.comboBoxSQLServers.Name = "comboBoxSQLServers";
+            this.comboBoxSQLServers.Size = new System.Drawing.Size(200, 21);
+            this.comboBoxSQLServers.TabIndex = 11;
             // 
             // checkBox1
             // 
@@ -167,10 +169,16 @@
             this.Controls.Add(this.groupBox3);
             this.Name = "SQLServerDatabaseControl";
             this.Size = new System.Drawing.Size(462, 157);
+            this.Load += new System.EventHandler(this.SQLServerDatabaseControl_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
+        }
+
+        private void buttonRefreshServer_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -179,7 +187,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button buttonRefreshServer;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxSQLServers;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label9;
